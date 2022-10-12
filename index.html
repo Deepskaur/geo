@@ -2,8 +2,8 @@
     <head>
     <title>The_Vintage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            
+        
+            <style>
             .newspaper{
               column-count: 3;       
                 
@@ -18,14 +18,12 @@ body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -36,7 +34,7 @@ img {vertical-align: middle;}
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
+ 
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -45,7 +43,6 @@ img {vertical-align: middle;}
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   height: 15px;
   width: 15px;
@@ -71,7 +68,6 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
@@ -252,6 +248,27 @@ span.psw {
   .sidenav a {font-size: 18px;}
 }
 
+  #coupon{
+            
+            height:400px;
+            width: 800px;
+            background-color: gray;
+            z-index: 100;
+            margin: auto;
+            visibility: hidden;
+            margin-top: -170%;
+            position: absolute;
+            margin-left: 20%;
+            background-image: url(shoppics/coupon.jpg);
+          background-repeat: no-repeat;
+         background-size: cover;
+        }
+        
+        #main{
+             opacity: 1;
+
+        }
+                       
                 
             
      
@@ -259,6 +276,10 @@ span.psw {
     </head>
     
     <body style="background-image: url(shoppics/vintage1.jpg); background-size: cover;" >
+        
+         <div id="main">
+
+        
         <center> <img  style="margin-left: -100px; margin-top: -10px; border-radius: 50%;" src="shoppics/symbol.jpg" height="160px" width="160px" ><h1 style="margin-left: 300px; margin-top: -90px;">THE VINTAGE</h1>  </center>
     <br><br><br>
    
@@ -471,8 +492,32 @@ Help
         
         <br>
         </div>
-        
     </footer>
+        </div>
+        
+        <div id="coupon">
+                <button  onClick="closeCoupon()">&times;</button>
+
+    </div>
+    
+    <script>
+        
+        window.onload=loadCoupon()
+    
+    function loadCoupon(){
+    document.getElementById('coupon').style.visibility='visible'; 
+  document.getElementById('main').style.opacity=0.9; 
+
+}
+function closeCoupon(){
+        document.getElementById('coupon').style.visibility='hidden';
+      document.getElementById('main').style.opacity=1; 
+
+}
+
+    
+    </script>
+    
     </body>
 
 </html>
