@@ -269,13 +269,33 @@ span.psw {
 
         }
                        
+              
+        .mydark{
+                    background-color: black;
+                    color: white;
+                } 
                 
+                body{
+                    background-color: white;
+                    color: black;
+                }  
             
      
 </style>
+        <script>
+            function changeMode(){
+                let mybody=document.body;
+                mybody.classList.toggle('mydark')
+            }
+        
+        </script>
     </head>
+    <br>
     
-    <body style="background-image: url(shoppics/vintage1.jpg); background-size: cover;" >
+ <button style="margin-top: 10px;background-color: grey;border-radius: 5px;width: 10%;"  onClick="changeMode()">Change Mode</button>
+
+    
+    <body style=" background-size: cover;" >
         
          <div id="main">
 
@@ -321,9 +341,12 @@ function closeNav() {
         
         
         <br>
+             <br>
         
      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-top: -8%;">Sign in</button>
-
+         <br>
+        
+             
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php" method="post">
