@@ -290,20 +290,47 @@ span.psw {
         
         </script>
     </head>
-    <br>
     
- <button style="margin-top: 10px;background-color: grey;border-radius: 5px;width: 10%;"  onClick="changeMode()">Change Mode</button>
+    <br>
+    <br>
+     
+    
+ <button style="margin-top: 5px;background-color: grey;border-radius: 5px;width: 10%;"  onClick="changeMode()">Change Mode</button>
 
     
     <body style=" background-size: cover;" >
+        <br>
         
          <div id="main">
+             
+             <button style="width: 6%; height: 7%; border: 1px solid white;background-color: white; float: left; margin-top: -1%;" onClick="geolocation()"><img style="margin-left: -10%;"  src="shoppics/weather.jpg" width="100%" height="100%"></button>
+    <p id="out"></p>
+     <p id="weatherOut"></p>
+   <script>
+       let x=document.getElementById('out');
+       let y=document.getElementById('weatherOut');
+
+       function geolocation(){
+           if(navigator.geolocation){
+               navigator.geolocation.getCurrentPosition(showPosition)
+               
+           } else{
+               x.innerText="geo not supported!";
+           }
+       }
+       function showPosition(data){
+           console.log(data)
+           let lat=data.coords.latitude;
+           let long=data.coords.longitude;
+       }
+       
+        </script>
 
         
-        <center> <img  style="margin-left: -100px; margin-top: -10px; border-radius: 50%;" src="shoppics/symbol.jpg" height="160px" width="160px" ><h1 style="margin-left: 300px; margin-top: -90px;">THE VINTAGE</h1>  </center>
-    <br><br><br>
+        <center> <img  style="margin-left: -100px; margin-top: -25px; border-radius: 50%;" src="shoppics/symbol.jpg" height="160px" width="160px" ><h1 style="margin-left: 300px; margin-top: -90px;">THE VINTAGE</h1>  </center>
+    <br>
    
-         <div style="margin-top: -140px;">
+         <div style="margin-top: -190px;">
         <img src="shoppics/fb.png" height="30px" width="30px">
         <img src="shoppics/insta.png" height="30px" width="30px">
         <img src="shoppics/twitter.png" height="30px" width="30px">
@@ -343,7 +370,7 @@ function closeNav() {
         <br>
              <br>
         
-     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-top: -8%;">Sign in</button>
+     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-top: -11%;">Sign in</button>
          <br>
         
              
